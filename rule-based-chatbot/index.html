@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="bot-info">
+                <div class="bot-avatar">
+                    <div class="pulse-ring"></div>
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div>
+                    <h1>Aura</h1>
+                    <span class="status">Online</span>
+                </div>
+            </div>
+            <button class="options-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        </header>
+        
+        <main class="chat-box" id="chat-box">
+            <div class="message bot-message slide-in">
+                <div class="message-content">
+                    Hello! I'm Aura, your assistant. How can I help you today?
+                </div>
+                <div class="message-timestamp">Just now</div>
+            </div>
+        </main>
+        
+        <footer class="chat-input-area">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button id="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        VANTA.NET({
+            el: ".background-animation",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xb742ff,
+            backgroundColor: 0x050505,
+            points: 12.00,
+            maxDistance: 22.00,
+            spacing: 18.00
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
